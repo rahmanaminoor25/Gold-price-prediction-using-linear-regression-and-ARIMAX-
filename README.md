@@ -29,7 +29,7 @@ Upon further research, we decided to implement the following additional features
 
 ## Model
 
-We intend to use multiple linear regression to model the data. In order to track the price gold tommorow/ next week/ in the next three months, We simply take the current price of gold and shift it by 1/ 7/ 31 units. This then serves as the target variable. 
+We intend to use multiple linear regression to model the data and then proceed with ARIMA models. In order to track the price gold tommorow/ next week/ in the next three months, We simply take the current price of gold and shift it by 1/ 7/ 31 units. This then serves as the target variable. 
 
 #### Important note:
 Given that we are modelling future gold prices using the current gold price as a feature, autocorrelation could be present (this is later confirmed via the durbin watson test and ACF plot). Autocorrelation entails the residuals not being random (i.e. following a pattern). This violates a core assumption of the least squares method (the independence of errors) which leads to an underestimated variance and thus overconfident model. Source: https://economics.town/econometric-methods/consequences-autocorrelation-ols-estimators/
